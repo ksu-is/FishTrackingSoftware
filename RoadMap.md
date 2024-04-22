@@ -1,5 +1,5 @@
-#Sprint 1
-[] COMPLETED
+# Sprint 1
+- [] COMPLETED
 
 
 # Sprint 2
