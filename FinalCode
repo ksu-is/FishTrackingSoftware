@@ -8,11 +8,39 @@ pygame.init()
 # Initialize Pygame
 pygame.init()
 
-# Set up the screen
+# Create space for fish
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("2D Space")
+pygame.display.set_caption("Pond for Project")
 
 # Colors
 WHITE = (255, 255, 255)
 FISH_COLORS = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (255, 165, 0)]  # Red, Green, Blue, Yellow, Orange
+
+# Define the class for a moving object
+class MovingObject:
+    def __init__(self, x, y, width, height, color, name):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+        self.color = color
+        self.name = name
+        self.velocity = random.randint(1, 5)  # Random speed of the object
+        self.direction = random.choice([-1, 1])  # Random initial direction (-1 for left, 1 for right)
+
+    def draw(self):
+        pygame.draw.rect(screen, self.color, (self.x, self.y, self.width, self.height))
+        font = pygame.font.SysFont(None, 20)
+        text = font.render(self.name, True, BLACK)
+        text_rect = text.get_rect(center=(self.x + self.width // 2, self.y + self.height // 2))
+        screen.blit(text, text_rect)
+
+    def move(self):
+        self.x += self.velocity * self.direction
+        if self.x < 0:
+            self.x = 0
+            self.direction = 1  # Change direction to right
+        elif self.x > WIDTH - self.width:
+            self.x = WIDTH - self.width
+            self.direction = -1  # Change direction to left
