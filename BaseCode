@@ -1,0 +1,13 @@
+import pygame
+import random
+import math
+
+# Initialize Pygame
+pygame.init()
+
+*******************************
+#First section of my code. What this does is it initializes the pygame, random, and math modules. 
+Pygame installs game-like features to Python. This allows one to create a 2d space where fish can "exist". It provides shapes and sounds that one can utilize for the code.
+Random is just a pseudo-random number generator which is useful for generating numbers to assign to fish.
+Math just allows one to use simple arithmetic for tracking purposes.
+*******************************
