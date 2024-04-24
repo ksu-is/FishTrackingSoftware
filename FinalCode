@@ -61,3 +61,20 @@ for i in range(10):
     name = fish_names[i % len(fish_names)]  # Cycling through fish names
     fish = MovingObject(x, y, width, height, color, name)
     fishes.append(fish)
+
+# Main loop
+running = True
+while running:
+    # Event handling
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Clear the screen
+    screen.fill(WHITE)
+
+    # Move and draw fishes
+    for fish in fishes:
+        fish.move()
+        fish.draw()
+
