@@ -48,5 +48,16 @@ class MovingObject:
 # Create a list to hold the moving objects (fish)
 fishes = []
 
-# Names of the fishes
+# Names of the fish
 fish_names = ["Bass", "Trout", "Crappie", "Bluegill", "Hybrid"]
+
+# Different names and colors for each species
+for i in range(10):
+    x = random.randint(0, WIDTH)
+    y = random.randint(0, HEIGHT)
+    width = random.randint(20, 50)
+    height = random.randint(20, 50)
+    color = FISH_COLORS[i % len(FISH_COLORS)]  # Cycling through available colors
+    name = fish_names[i % len(fish_names)]  # Cycling through fish names
+    fish = MovingObject(x, y, width, height, color, name)
+    fishes.append(fish)
