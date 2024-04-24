@@ -78,3 +78,13 @@ while running:
         fish.move()
         fish.draw()
 
+# Box with fish names
+    box_rect = pygame.Rect(10, 10, 120, 150)
+    pygame.draw.rect(screen, WHITE, box_rect)
+    pygame.draw.rect(screen, BLACK, box_rect, 2)
+    font = pygame.font.SysFont(None, 20)
+    for i, name in enumerate(fish_names):
+        text = font.render(name, True, BLACK)
+        text_rect = text.get_rect(x=20, y=20 + i * 25)
+        screen.blit(text, text_rect)
+
