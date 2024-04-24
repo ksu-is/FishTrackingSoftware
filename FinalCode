@@ -44,3 +44,9 @@ class MovingObject:
         elif self.x > WIDTH - self.width:
             self.x = WIDTH - self.width
             self.direction = -1  # Change direction to left
+
+# Create a list to hold the moving objects (fish)
+fishes = []
+
+# Names of the fishes
+fish_names = ["Bass", "Trout", "Crappie", "Bluegill", "Hybrid"]
