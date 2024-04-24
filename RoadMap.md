@@ -10,7 +10,7 @@
 - [x] Change 3
 - [x] Change 4
 - [x] Change 5
-- [ ] Change 6
+- [x] Change 6
 
       
-- [ ] Turn in Sprint #2 quiz on D2L by Wednesday.
+- [x] Turn in Sprint #2 quiz on D2L by Wednesday.
