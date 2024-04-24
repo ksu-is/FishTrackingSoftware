@@ -88,3 +88,12 @@ while running:
         text_rect = text.get_rect(x=20, y=20 + i * 25)
         screen.blit(text, text_rect)
 
+# Update the display
+    pygame.display.update()
+
+    # Control the frame rate
+    pygame.time.Clock().tick(60)
+
+# Quit Pygame
+pygame.quit()
+
